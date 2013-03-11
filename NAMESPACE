@@ -7,7 +7,6 @@ exportPattern(".")
 import(
   som,
   rgl,
-  tripack,
   ade4,
   geometry
 )
