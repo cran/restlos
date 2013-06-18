@@ -29,7 +29,7 @@ The resulting plots depend on the dimensionality of the data set. For \code{d=2}
 }
 
 \references{
-Liebscher, S., Kirschstein, T., and Becker, C. (2012): The Flood Algorithm - A Multivariate, Self-Organizing-Map-Based, Robust Location and Covariance Estimator, \emph{Statistics and Computing}, DOI: 10.1007/s11222-011-9250-3.
+Liebscher, S., Kirschstein, T., and Becker, C. (2012): The Flood Algorithm - A Multivariate, Self-Organizing-Map-Based, Robust Location and Covariance Estimator, \emph{Statistics and Computing}, 22(1), 325-336, DOI: 10.1007/s11222-011-9250-3.
 }
 
 \author{

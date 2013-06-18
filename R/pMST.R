@@ -1,6 +1,9 @@
 pMST<-function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2), 
     lmax = dim(data)[1] * 100) 
 {
+
+	require(nnclust)
+ 	
 	if(is.data.frame(data))
 		data=as.matrix(data)
 		
@@ -12,35 +15,21 @@ pMST<-function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2),
 
     if (dim(data)[1] <= dim(data)[2]) 
         stop("n > d required")
+	
+	if (dim(data)[1] <= N) 
+        stop("Trying to find more than all observations")
 		
-    require(ade4)
-    require(rgl)
+		
+	x2 <- mst(data)
+	U1 <- x2$dist
+	x2 <- cbind(x2$from,x2$to)
+	T1<-order(U1)
+	l<-0
+	LiB<-list(c())
+	GeB<-c()
+	LeB<-c()
+	x6<-matrix(0,ncol=3,nrow=1)
 
-    ddmst <- function(dat) {
-        ddat <- dist(dat, upper = T, diag = T)
-        mstdat <- mstree(ddat)
-        o <- dim(dat)[1] - 1
-        em <- numeric(o)
-        k <- 0
-        ddat <- as.matrix(ddat)
-        for (i in 1:o) {
-            k <- k + ddat[mstdat[i, 1], mstdat[i, 2]]
-            em[i] <- ddat[mstdat[i, 1], mstdat[i, 2]]
-        }
-        emax <- max(em)
-        return(k)
-    }
-
-    x1 <- dist(data, upper = T, diag = T)
-    x2 <- mstree(x1)
-    x1 <- as.matrix(x1)
-    U1 <- diag(x1[x2[, 1], x2[, 2]])
-    T1 <- order(U1)
-    l <- 0
-    LiB <- list(c())
-    GeB <- c()
-    LeB <- c()
-    x6 <- matrix(c(0, 0, 0), ncol = 3)
     repeat {
         l <- l + 1
         T2 <- sapply(LiB, function(x) {

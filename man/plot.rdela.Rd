@@ -27,7 +27,7 @@ The resulting plots depend on the dimensionality of the data set. For \code{d=2}
 }
 
 \references{
-Liebscher, S., Kirschstein, T., and Becker, C. (201x): RDELA - A Delaunay-Triangulation-based, Location and Covariance Estimator with High Breakdown Point, to appear in \emph{Statistics and Computing}, DOI: 10.1007/s11222-012-9337-5.
+Liebscher, S., Kirschstein, T., and Becker, C. (2013): RDELA - A Delaunay-Triangulation-based, Location and Covariance Estimator with High Breakdown Point, \emph{Statistics and Computing}, DOI: 10.1007/s11222-012-9337-5.
 }
 
 \author{

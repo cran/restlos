@@ -37,7 +37,7 @@ The function uses the \code{mstree} function from the \pkg{ade4}-package to dete
 }
 
 \references{
-Kirschstein, T., Liebscher, S., and Becker, C. (201x): Robust estimation of location and scatter by pruning the minimum spanning tree, \emph{under revision}.
+Kirschstein, T., Liebscher, S., and Becker, C. (2013): Robust estimation of location and scatter by pruning the minimum spanning tree, \emph{Journal of Multivariate Analysis}, 120, 173-184, DOI: 10.1016/j.jmva.2013.05.004.
 }
 
 \author{

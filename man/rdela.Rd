@@ -38,7 +38,7 @@ The function first calls the \code{delaunayn} function within the \pkg{geometry}
 }
 
 \references{
-Liebscher, S., Kirschstein, T., and Becker, C. (201x): RDELA - A Delaunay-Triangulation-based, Location and Covariance Estimator with High Breakdown Point, to appear in \emph{Statistics and Computing}, DOI: 10.1007/s11222-012-9337-5.
+Liebscher, S., Kirschstein, T., and Becker, C. (2013): RDELA - A Delaunay-Triangulation-based, Location and Covariance Estimator with High Breakdown Point, \emph{Statistics and Computing}, DOI: 10.1007/s11222-012-9337-5.
 }
 
 \author{

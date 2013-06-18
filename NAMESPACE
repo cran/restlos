@@ -8,5 +8,6 @@ import(
   som,
   rgl,
   ade4,
-  geometry
+  geometry,
+  nnclust
 )
