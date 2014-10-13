@@ -7,7 +7,6 @@ exportPattern(".")
 import(
   som,
   rgl,
-  ade4,
   geometry,
-  nnclust
+  igraph
 )

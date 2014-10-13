@@ -1,9 +1,6 @@
-pMST<-function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2), 
+pMST <- function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2), 
     lmax = dim(data)[1] * 100) 
 {
-
-	require(nnclust)
- 	
 	if(is.data.frame(data))
 		data=as.matrix(data)
 		
@@ -15,21 +12,43 @@ pMST<-function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2),
 
     if (dim(data)[1] <= dim(data)[2]) 
         stop("n > d required")
-	
-	if (dim(data)[1] <= N) 
-        stop("Trying to find more than all observations")
 		
-		
-	x2 <- mst(data)
-	U1 <- x2$dist
-	x2 <- cbind(x2$from,x2$to)
-	T1<-order(U1)
-	l<-0
-	LiB<-list(c())
-	GeB<-c()
-	LeB<-c()
-	x6<-matrix(0,ncol=3,nrow=1)
+    # require(igraph)
+    # require(rgl)
 
+    ddmst <- function(dat) {
+        ddat <- as.matrix(dist(dat, upper = T, diag = T))
+        
+		x.tmp <- graph.adjacency(ddat, weighted=TRUE, mode="undirected")
+		mstdat  <- minimum.spanning.tree(x.tmp)
+		mstdat  <- matrix(as.numeric(get.edgelist(mstdat)), ncol=2)
+		
+        o <- dim(dat)[1] - 1
+        em <- numeric(o)
+        k <- 0
+        ddat <- as.matrix(ddat)
+        for (i in 1:o) {
+            k <- k + ddat[mstdat[i, 1], mstdat[i, 2]]
+            em[i] <- ddat[mstdat[i, 1], mstdat[i, 2]]
+        }
+        emax <- max(em)
+        return(k)
+    }
+
+    x1 <- as.matrix(dist(data, upper = T, diag = T))
+	x.tmp <- graph.adjacency(x1, weighted=TRUE, mode="undirected")
+	x2 <- minimum.spanning.tree(x.tmp)
+
+	x2 <- matrix(as.numeric(get.edgelist(x2)), ncol=2)
+
+    x1 <- as.matrix(x1)
+    U1 <- diag(x1[x2[, 1], x2[, 2]])
+    T1 <- order(U1)
+    l <- 0
+    LiB <- list(c())
+    GeB <- c()
+    LeB <- c()
+    x6 <- matrix(c(0, 0, 0), ncol = 3)
     repeat {
         l <- l + 1
         T2 <- sapply(LiB, function(x) {

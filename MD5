@@ -1,11 +1,11 @@
-3e39e0fab41093b05238a057b5a44540 *DESCRIPTION
-3a1f7bfacd1d8332954ce92b7258db7e *NAMESPACE
-2be905ee0b32116042ac8dde6c4a3d81 *R/flood.R
-87768cdb494238fc56d1f79f3060585c *R/pMST.r
-8e6be6a2a240cc305066f06b0298b335 *R/plot.flood.R
-25917a36c4495b1a2a1b26c30ccb4042 *R/plot.pMST.R
-b6b8f814ad0f71a746625bac2dedd391 *R/plot.rdela.R
-b1816ad478cfaf697b60a78b8ed7769b *R/rdela.R
+82ffdd53ce25e9cb4faad1d650edee19 *DESCRIPTION
+fc43664757d380955c328149c29ad922 *NAMESPACE
+46e08c13305f9cb3d442d8d6ada21ec0 *R/flood.R
+97980d67fa75d7a535d30187f8fa2c8d *R/pMST.r
+e0af4f27ac1feb3f47bc3ccb3e0191e1 *R/plot.flood.R
+acc86c532c0538ab298ac45a5916859f *R/plot.pMST.R
+0e7ffd9e34f086342c4f97c34f3b8731 *R/plot.rdela.R
+0c475de132b683c7d6ca255ebbfe7596 *R/rdela.R
 7fb4dbc63fac80769938cc68dc743264 *R/restlos-internal.R
 e14b848d29f84b8c0f928cb4f5ebe815 *data/halle.rda
 3130cb124a2a1e963a40fd7692c657cf *man/flood.Rd
@@ -16,4 +16,4 @@ e7504b9e14648189e94ed91e700e9f43 *man/plot.pMST.Rd
 8d64be94b21ed0cfe74c567cc60bb0f9 *man/plot.rdela.Rd
 c35a9476d5799ff36fb3a3120541edd3 *man/rdela.Rd
 ce5c6847b46310459ceffc26964d66d4 *man/restlos-internal.Rd
-9b76f8bacc8a43fede2042d24d510dc7 *man/restlos-package.Rd
+5d351df9228dfe554bd9dc95aef79053 *man/restlos-package.Rd

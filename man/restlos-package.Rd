@@ -3,19 +3,19 @@
 \alias{restlos}
 \docType{package}
 \title{
-Robust estimation of location and scatter
+Robust Estimation of Location and Scatter
 }
 
 \description{
-The package implements some recently introduced methodology for robust estimation of location and scatter as well as outlier identification.
+The restlos package provides algorithms for robust estimation of location and scatter based on minimum spanning trees (pMST), self-organizing maps (Flood Algorithm), and Delaunay triangulations (RDELA). The functions are also suitable for outlier detection.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab restlos\cr
 Type: \tab Package\cr
-Version: \tab 0.1-2\cr
-Date: \tab 2013-06-18\cr
+Version: \tab 0.1-3\cr
+Date: \tab 2014-10-13\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }

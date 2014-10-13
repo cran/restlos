@@ -6,7 +6,7 @@ if(is.matrix(data)==F)stop("at least two-dimensional data matrix required")
 if(mode(data)!="numeric")stop("numeric data required")
 if(dim(data)[1]<=dim(data)[2])stop("n > d required")
 
-require(som)
+# require(som)
 
 
 N<-floor((dim(data)[1]+dim(data)[2]+1)/2)

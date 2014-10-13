@@ -1,6 +1,6 @@
 plot.pMST<-function (x, ...) 
 {
-    require(rgl)
+    # require(rgl)
     drin = x$sample
     data = x$data
     x6 = x$x6
@@ -18,7 +18,7 @@ plot.pMST<-function (x, ...)
     if (dim(data)[2] == 2) {
         plot(data, xlab = "x", ylab = "y")
         points(data[drin, ], col = "red")
-        x11()
+        dev.new()
     }
     if (!is.null(nrow(x7))) {
         par(mfrow = c(2, 2))
