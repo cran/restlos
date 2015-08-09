@@ -1,5 +1,5 @@
-pMST <- function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2), 
-    lmax = dim(data)[1] * 100) 
+pMST <- function (data, N = floor((nrow(data) + ncol(data) + 1)/2), 
+    lmax = nrow(data) * 100) 
 {
 	if(is.data.frame(data))
 		data=as.matrix(data)
@@ -21,7 +21,7 @@ pMST <- function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2),
         
 		x.tmp <- graph.adjacency(ddat, weighted=TRUE, mode="undirected")
 		mstdat  <- minimum.spanning.tree(x.tmp)
-		mstdat  <- matrix(as.numeric(get.edgelist(mstdat)), ncol=2)
+		mstdat  <- matrix(as.numeric(get.edgelist(mstdat, names=F)), ncol=2)
 		
         o <- dim(dat)[1] - 1
         em <- numeric(o)
@@ -39,7 +39,7 @@ pMST <- function (data, N = floor((dim(data)[1] + dim(data)[2] + 1)/2),
 	x.tmp <- graph.adjacency(x1, weighted=TRUE, mode="undirected")
 	x2 <- minimum.spanning.tree(x.tmp)
 
-	x2 <- matrix(as.numeric(get.edgelist(x2)), ncol=2)
+	x2 <- matrix(as.numeric(get.edgelist(x2, names=F)), ncol=2)
 
     x1 <- as.matrix(x1)
     U1 <- diag(x1[x2[, 1], x2[, 2]])

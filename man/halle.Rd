@@ -3,7 +3,7 @@
 \docType{data}
 
 \title{
-halle data set
+Halle data set
 }
 
 \description{
@@ -13,7 +13,7 @@ Artificial data set containing a total of 1600 observations in two dimensions (i
 \usage{halle}
 
 \examples{
-#plot(halle)
+# plot(halle)
 }
 
 \keyword{datasets}

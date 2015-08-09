@@ -22,8 +22,8 @@ if(dim(x$data)[2]==3){
 	}
 
 dev.new()
-plot(mahalanobis(x$data,center=colMeans(x$data[x$drin,]),cov=cov(x$data[x$drin,])),ylab="Mahalanobis distance",xlab="Index")
-points(x$drin,mahalanobis(x$data,center=colMeans(x$data[x$drin,]),cov=cov(x$data[x$drin,]))[x$drin],col="red")
+if(is.null(x$final)){plot(mahalanobis(x$data,center=colMeans(x$data[x$drin,]),cov=cov(x$data[x$drin,])),ylab="Mahalanobis distance",xlab="Index")}else{plot(mahalanobis(x$data,center=colMeans(x$data[x$final,]),cov=cov(x$data[x$final,])),ylab="Mahalanobis distance",xlab="Index")}
+if(is.null(x$final)){points(x$drin,mahalanobis(x$data,center=colMeans(x$data[x$drin,]),cov=cov(x$data[x$drin,]))[x$drin],col="red")}else{points(x$final,mahalanobis(x$data,center=colMeans(x$data[x$final,]),cov=cov(x$data[x$final,]))[x$final],col="red")}
 
 }
 

@@ -6,7 +6,7 @@ Plot function for objects of class \code{pMST}
 }
 
 \description{
-Function to plot the results obtained by the functions \code{pMST}.
+Function to plot the results obtained by function \code{pMST}.
 }
 
 \usage{
@@ -23,7 +23,7 @@ Further graphical parameters.
 }
 
 \details{
-The resulting plots display the LC- and the AL-plot to support the decision on the size of the robust subsample, see references. Moreover, if data set has dimension 2 or 3 the data set is plotted where the chosen robust subset is superimposed as red points.
+The resulting plots display the LC- and the AL-plot to support the decision on the size of the robust subsample, see references. Moreover, if the data set has dimension 2 or 3, the data set is plotted with the chosen robust subset  superimposed as red points.
 }
 
 \references{
@@ -35,7 +35,7 @@ Thomas Kirschstein <thomas.kirschstein@wiwi.uni-halle.de>
 }
 
 \examples{
-#plot(pMST(halle))
+# plot(pMST(halle))
 }
 
 \keyword{ robust }

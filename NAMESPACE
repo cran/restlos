@@ -4,9 +4,16 @@
 exportPattern(".")
 
 # Import all packages listed as Imports or Depends
-import(
-  som,
-  rgl,
-  geometry,
-  igraph
-)
+importFrom("som", som)
+importFrom("rgl", plot3d, points3d, surface3d, open3d)
+importFrom("geometry", delaunayn, convhulln)
+importFrom("igraph", graph.adjacency, minimum.spanning.tree, get.edgelist)
+importFrom("limSolve", Solve)
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "abline", "lines", "par", "plot", "points", "symbols")
+importFrom("stats", "cov", "dist", "mahalanobis", "na.omit", "sd")
+importFrom("utils", "read.table")
+
+S3method(plot, flood)
+S3method(plot, pMST)
+S3method(plot, rdela)

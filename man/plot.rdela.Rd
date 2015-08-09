@@ -39,7 +39,7 @@ At the moment no additional graphical parameters can be passed.
 }
 
 \examples{
-#plot(rdela(halle))
+# plot(rdela(halle))
 }
 
 \keyword{ robust }

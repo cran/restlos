@@ -41,7 +41,7 @@ At the moment no additional graphical parameters can be passed.
 }
 
 \examples{
-#plot(flood(halle))
+# plot(flood(halle))
 }
 
 \keyword{ robust }

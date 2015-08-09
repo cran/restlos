@@ -56,7 +56,7 @@ Steffen Liebscher <steffen.liebscher@wiwi.uni-halle.de>
 }
 
 \examples{
-#flood(halle)
+# flood(halle)
 }
 
 \keyword{ robust }
